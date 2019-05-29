@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mda-qV-WKe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner View Controller-->
+        <scene sceneID="Qhc-SP-bTD">
+            <objects>
+                <viewController id="mda-qV-WKe" customClass="ScannerViewController" customModule="RxQRCodeScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A7W-Sd-Itg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fni-eT-jQf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" name="HerbalifeDark"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-3q-nhZ">
+                                <rect key="frame" x="315" y="35" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Byw-Ny-0jh"/>
+                                    <constraint firstAttribute="height" constant="35" id="s2A-5P-mTb"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeAction" destination="mda-qV-WKe" eventType="touchUpInside" id="0CT-68-62l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="HerbalifeDark"/>
+                        <constraints>
+                            <constraint firstItem="Fni-eT-jQf" firstAttribute="top" secondItem="A7W-Sd-Itg" secondAttribute="top" id="IUF-SQ-VJK"/>
+                            <constraint firstItem="LPI-3q-nhZ" firstAttribute="top" secondItem="mRW-KG-6uD" secondAttribute="top" constant="15" id="Jhf-J9-3DK"/>
+                            <constraint firstItem="Fni-eT-jQf" firstAttribute="leading" secondItem="A7W-Sd-Itg" secondAttribute="leading" id="UXG-dZ-gB1"/>
+                            <constraint firstAttribute="bottom" secondItem="Fni-eT-jQf" secondAttribute="bottom" id="fdg-Ua-jkO"/>
+                            <constraint firstAttribute="trailing" secondItem="Fni-eT-jQf" secondAttribute="trailing" id="gdc-jR-0WF"/>
+                            <constraint firstItem="mRW-KG-6uD" firstAttribute="trailing" secondItem="LPI-3q-nhZ" secondAttribute="trailing" constant="25" id="xRB-td-RIU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mRW-KG-6uD"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Fni-eT-jQf" id="HkJ-RA-szX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRk-6s-FHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="100" height="100"/>
+        <namedColor name="HerbalifeDark">
+            <color name="ibMissingResourceColor" catalog="#$assets-com.apple.dt.DVTKit" colorSpace="catalog"/>
+        </namedColor>
+    </resources>
+</document>
